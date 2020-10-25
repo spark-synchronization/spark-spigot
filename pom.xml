@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.sparksync</groupId>
+  <artifactId>spigot</artifactId>
+  <version>1.0-ALPHA</version>
+  <name>Spark Synchronization</name>
+  <description>Exploring the possibility of performance gains via distribution in Minecraft.</description>
+  
+  <repositories>
+    <repository>
+      <id>paperspigot-repository</id>
+      <url>https://papermc.io/repo/repository/maven-public/</url>
+    </repository>
+  </repositories>
+  
+  <dependencies>
+    <dependency>
+	  <groupId>org.github.paperspigot</groupId>
+	  <artifactId>paperspigot</artifactId>
+	  <version>1.7.10-R0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+</project>

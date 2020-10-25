@@ -1,0 +1,7 @@
+name: SparkSpigot
+version: 1.0-ALPHA
+description: Exploring the possibility of performance gains via distribution in Minecraft.
+main: io.sparksync.spigot.SparkSpigot
+load: STARTUP
+authors: [Spark Synchronization]
+website: https://github.com/spark-synchronization
