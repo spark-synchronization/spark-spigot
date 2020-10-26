@@ -1,6 +1,9 @@
 package io.sparksync.spigot;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import io.sparksync.spigot.listeners.ProfileListeners;
 
 public class SparkSpigot extends JavaPlugin {
 	
@@ -9,6 +12,8 @@ public class SparkSpigot extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		instance = this;
+		
+		registerListeners();
 	}
 	
 	@Override
@@ -16,7 +21,11 @@ public class SparkSpigot extends JavaPlugin {
 		instance = null;
 	}
 	
-	public SparkSpigot getInstance() {
+	private void registerListeners() {
+		Bukkit.getPluginManager().registerEvents(new ProfileListeners(), this);
+	}
+	
+	public static SparkSpigot getInstance() {
 		return instance;
 	}
 }
