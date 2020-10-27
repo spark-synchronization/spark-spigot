@@ -1,9 +1,10 @@
 package io.sparksync.spigot;
 
-import org.bukkit.Bukkit;
+import java.util.Arrays;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
-import io.sparksync.spigot.listeners.ProfileListeners;
+import io.sparksync.spigot.listener.ProfileListener;
 
 public class SparkSpigot extends JavaPlugin {
 	
@@ -13,16 +14,12 @@ public class SparkSpigot extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 		
-		registerListeners();
+		Arrays.asList(new ProfileListener()).forEach(listener -> getServer().getPluginManager().registerEvents(listener, this));			
 	}
 	
 	@Override
 	public void onDisable() {
 		instance = null;
-	}
-	
-	private void registerListeners() {
-		Bukkit.getPluginManager().registerEvents(new ProfileListeners(), this);
 	}
 	
 	public static SparkSpigot getInstance() {
